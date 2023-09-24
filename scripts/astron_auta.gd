@@ -26,14 +26,13 @@ func _physics_process(delta):
 		
 		position += (player.position - position)/50
 		
-		move_and_collide(motion)
+		var collision = move_and_collide(motion)
 
 
-func _on_body_entered(body):
+func player_collided():
 	if mode == "enemy":
 		player.health - 1
 	elif mode == "dead":
-		var direction = position.direction_to(player.position)
-		print(direction)
-		position += (player.position - position)/50
+		var direction = position.direction_to(player.position).round()
+		position += -direction
 		
