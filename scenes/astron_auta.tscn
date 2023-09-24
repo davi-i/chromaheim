@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://co26gnpi6cv7y"]
+
+[ext_resource type="Script" path="res://scripts/astron_auta.gd" id="1_5ktw0"]
+[ext_resource type="Texture2D" uid="uid://c76e8vtshgpjr" path="res://sprites/blue_astron_auta.png" id="2_nqwmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvfci"]
+
+[node name="AstronAuta" type="CharacterBody2D"]
+script = ExtResource("1_5ktw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rvfci")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nqwmh")

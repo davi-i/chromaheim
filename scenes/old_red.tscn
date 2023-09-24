@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1hly5aobj0ma"]
+
+[ext_resource type="PackedScene" uid="uid://cpeaubgwb5emp" path="res://scenes/red_world.tscn" id="1_508pn"]
+
+[node name="RedWorld" type="Node"]
+
+[node name="RedWorld" parent="." instance=ExtResource("1_508pn")]

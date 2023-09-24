@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm5wec6unsue3"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_y2bqm"]
+[ext_resource type="PackedScene" uid="uid://dyguaayxyeinl" path="res://scenes/player.tscn" id="2_7n7v4"]
+[ext_resource type="PackedScene" uid="uid://co26gnpi6cv7y" path="res://scenes/astron_auta.tscn" id="3_2q7y7"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_y2bqm")
+
+[node name="Player" parent="." instance=ExtResource("2_7n7v4")]
+
+[node name="AstronAuta" parent="." instance=ExtResource("3_2q7y7")]
+position = Vector2(80, -40)
