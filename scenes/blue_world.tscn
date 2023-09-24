@@ -20,6 +20,7 @@ position = Vector2(1030, 209)
 
 [node name="DialogArea" parent="." instance=ExtResource("4_jo8qf")]
 position = Vector2(266, 253)
+text = Array[String](["Ei, você aí!", "Pode me ajudar?", "Estou preso nessa caixa...", "Mas logo a frente tem um botão que talvez possa ajudar."])
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-7, -5.00002)

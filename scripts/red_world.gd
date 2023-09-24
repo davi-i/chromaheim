@@ -9,3 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_dialog_area_hide_dialog():
+	hide_dialog.emit()
+
+
+func _on_dialog_area_show_dialog(text):
+	show_dialog.emit(text)

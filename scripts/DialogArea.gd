@@ -21,5 +21,6 @@ func show_next():
 		active = false
 
 func _on_body_entered(body):
+	print("entered")
 	if active:
 		show_next()
