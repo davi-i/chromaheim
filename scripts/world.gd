@@ -39,4 +39,9 @@ func _on_button_pressed(color):
 		blue_level.queue_free()
 		add_child(red_level)
 		move_child(red_level, 0)
+	elif color == "yellow":
+		blue_level.queue_free()
+		add_child(yellow_level)
+		move_child(yellow_level, 0)
+		
 	

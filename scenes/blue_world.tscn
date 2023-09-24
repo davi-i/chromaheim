@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://qhi5ds4vy24j"]
+[gd_scene load_steps=6 format=3 uid="uid://qhi5ds4vy24j"]
 
 [ext_resource type="TileSet" uid="uid://cm11te2fg5ef4" path="res://sprites/tile_set.tres" id="1_6ye0m"]
 [ext_resource type="Script" path="res://scripts/blue_world.gd" id="2_yehhc"]
 [ext_resource type="PackedScene" uid="uid://cv1xbyt5i2if8" path="res://scenes/dialog_area.tscn" id="3_wgufe"]
+[ext_resource type="PackedScene" uid="uid://dbhmnfmjalg2b" path="res://scenes/yellow_button.tscn" id="4_1aidn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8qjt"]
 size = Vector2(5, 65)
@@ -17,13 +18,17 @@ script = ExtResource("2_yehhc")
 
 [node name="DialogArea" parent="." instance=ExtResource("3_wgufe")]
 process_mode = 3
-text = Array[String](["Ei, você aí", "Preciso da sua ajuda!"])
+text = Array[String](["Ei, você aí", "Pode me ajudar?"])
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(246.5, 250.5)
 shape = SubResource("RectangleShape2D_r8qjt")
 
+[node name="RedButton" parent="." instance=ExtResource("4_1aidn")]
+position = Vector2(1030, 210)
+
 [connection signal="hide_dialog" from="DialogArea" to="." method="_on_dialog_area_hide_dialog"]
 [connection signal="show_dialog" from="DialogArea" to="." method="_on_dialog_area_show_dialog"]
+[connection signal="body_entered" from="RedButton" to="." method="_on_red_button_body_entered"]
 
 [editable path="DialogArea"]
