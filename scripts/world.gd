@@ -36,12 +36,19 @@ func _on_hide_dialog():
 func _on_button_pressed(color):
 	$AstronAuta.change_color(color)
 	if color == "red":
-		blue_level.queue_free()
+		remove_child(blue_level)
+		remove_child(yellow_level)
 		add_child(red_level)
 		move_child(red_level, 0)
 	elif color == "yellow":
-		blue_level.queue_free()
+		remove_child(blue_level)
+		remove_child(red_level)
 		add_child(yellow_level)
 		move_child(yellow_level, 0)
+	elif color == "blue":
+		remove_child(yellow_level)
+		remove_child(red_level)
+		add_child(blue_level)
+		move_child(blue_level, 0)
 		
 	
